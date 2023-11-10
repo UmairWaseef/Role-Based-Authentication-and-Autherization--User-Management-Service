@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jwt_security
+    username: root
+    password: pass123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: umrmoh200@gmail.com
+    password: hhhqsowijdfkkzse
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+application:
+  security:
+    jwt:
+      secret-key: HYTnAtEMmzz2vwwJp+uaArwR1HowIjGAH0GLtuIsnZhwjaovbreW2MbbyT/EUdD5
+      expiration : 86400000 #one day
+      refresh-token :
+        expiration: 604800000 #seven days
